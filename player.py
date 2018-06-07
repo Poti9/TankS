@@ -22,7 +22,7 @@ class Player:
     def draw(self, surfing_surface):
         c = self.pos + cmath.rect(self.radius / 2, radians(self.direction))
         d = self.pos + cmath.rect(1.5*self.radius, radians(self.direction))
-        pygame.draw.line(surfing_surface, BLACK, (int(c.real), int(c.imag)), (int(d.real),int(d.imag)), 3)
+        pygame.draw.line(surfing_surface, BLACK, (int(c.real), int(c.imag)), (int(d.real),int(d.imag)), 7)
         pygame.draw.circle(surfing_surface, self.color, (int(self.pos.real), int(self.pos.imag)), self.radius)
 
         v = -50 - (self.radius + 40) * 1j
@@ -81,16 +81,20 @@ class Player:
             self.bullets.remove(a)
 
     def start_rotating_left(self):
-        self.vel_rot = -5
+        self.vel_rot = -7
         #self.direction -= 10
+
     def start_rotating_right(self):
-        self.vel_rot = 5
+        self.vel_rot = 7
         #self.directiond += 10
+
     def stop_rotating(self):
         self.vel_rot = 0
+
     def fire_bullet(self):
         b = Bullet(self.pos, 10, self.direction)
         self.bullets.append(b)
+
     def place_mine(self):
         b = Bullet(self.pos, 0, self.direction)
         self.bullets.append(b)

@@ -11,7 +11,7 @@ class Bullet:
         self.pos = pos
         self.velocity = velocity
         self.direction = direction
-        self.radius = 10
+        self.radius = 4
 
     def draw(self, surfing_surface):
         pygame.draw.circle(surfing_surface, BLACK, (int(self.pos.real), int(self.pos.imag)), self.radius)

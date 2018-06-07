@@ -49,13 +49,13 @@ class GameState:
                     self.player_2.surfing_moving_backwards()
                 if event.key == pygame.K_s:
                     self.player_1.surfing_moving_backwards()
-                if event.key == pygame.K_f:
+                if event.key == pygame.K_t:
                     self.player_1.fire_bullet()
-                if event.key == pygame.K_COMMA:
-                    self.player_2.fire_bullet()
-                if event.key == pygame.K_g:
-                    self.player_1.place_mine()
                 if event.key == pygame.K_m:
+                    self.player_2.fire_bullet()
+                if event.key == pygame.K_y:
+                    self.player_1.place_mine()
+                if event.key == pygame.K_n:
                     self.player_2.place_mine()
 
     def update(self):

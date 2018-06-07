@@ -1,3 +1,4 @@
+
 BLACK = [0, 0, 0]
 width = 800
 height = 600
